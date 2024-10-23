@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Các Phòng Karaoke</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url("background.jpg") no-repeat center center fixed; /* Ảnh nền */
+        background-size: cover; /* Kích thước phủ toàn bộ */
+      }
+      header {
+        display: flex;
+        background: rgba(255, 255, 255, 0.8); /* Nền tối mờ */
+        padding: 10px 0;
+        justify-content: center;
+      }
+      header h1 {
+        background: linear-gradient(
+          to right,
+          rgb(202, 81, 202),
+          rgb(255, 170, 184)
+        ); /* Chuyển màu từ tím sang hồng */
+        -webkit-background-clip: text; /* Clip nền cho chữ */
+        -webkit-text-fill-color: transparent; /* Đổ màu chữ thành trong suốt */
+        font-size: clamp(30px, 5vw, 50px); /* Kích thước chữ từ 24px đến 50px */
+        margin: 0; /* Bỏ margin */
+        margin-top: 10px;
+        text-align: center; /* Căn giữa chữ trong thẻ h1 */
+      }
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9); /* Nền trắng mờ */
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .room {
+        display: flex; /* Sử dụng flexbox */
+        flex-direction: column; /* Căn chỉnh theo cột */
+        justify-content: space-between; /* Căn giữa các thành phần */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px;
+        flex-basis: calc(25% - 20px); /* 4 cột */
+        box-sizing: border-box;
+        transition: transform 0.2s, box-shadow 0.2s; /* Hiệu ứng chuyển đổi */
+        flex-direction: column;
+        height: 100%;
+        min-height: 390px;
+        max-width: 250px;
+      }
+      .room:hover {
+        transform: translateY(-5px); /* Nổi lên khi di chuột */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng khi nổi lên */
+      }
+      .room img {
+        width: 225px; /* Giới hạn chiều rộng tối đa */
+        height: 150px; /* Giới hạn chiều cao tối đa */
+        border-radius: 5px;
+        margin-bottom: 10px; /* Khoảng cách giữa hình ảnh và nội dung */
+      }
+      .room h3 {
+        margin: 0 0 10px;
+        flex-grow: 1;
+      }
+      .room p {
+        margin: 5px 0;
+      }
+      .room-info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between; /* Căn chỉnh các thành phần trong room */
+      }
+      .btn-book {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: white; /* Nền trắng */
+        color: #4675c0; /* Màu chữ */
+        border: 2px solid #4675c0; /* Viền màu */
+        text-align: center;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+        margin-top: auto;
+      }
+      .btn-book:hover {
+        background-color: #b8bfd6; /* Nền màu khi di chuột */
+        color: white; /* Màu chữ trắng khi di chuột */
+      }
+      .btn-book::after {
+        content: " ➔"; /* Dấu mũi tên */
+        font-weight: bold; /* Đậm chữ mũi tên */
+      }
+      .map-link {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-size: 1.1em;
+        color: #000000; /* Màu chữ cho liên kết */
+        text-decoration: none; /* Bỏ gạch chân */
+      }
+      .map-link:hover {
+        text-decoration: underline; /* Gạch chân khi di chuột */
+        text-decoration-color: blue;
+      }
+      @media (max-width: 800px) {
+        .room {
+          flex-basis: calc(50% - 20px); /* 2 cột */
+        }
+      }
+      @media (max-width: 600px) {
+        .room {
+          flex-basis: 100%; /* 1 cột */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Các Phòng Karaoke</h1>
+    </header>
+
+    <div class="container">
+      <div class="room">
+        <img
+          src="https://musicbox.vn/images/phungkhoang.jpg"
+          alt="MUSIC BOX PHÙNG KHOANG"
+        />
+        <h3>MUSIC BOX PHÙNG KHOANG</h3>
+        <p>0989 541 469</p>
+        <a
+          href="https://www.google.com/maps/place/Muzic+Box+Ph%C3%B9ng+Khoang,+Music+Box+Ph%C3%B9ng+Khoang/@20.986913,105.79113,15z/data=!4m6!3m5!1s0x3135ad9e2dd1b0a7:0x5dc47bb34387fca0!8m2!3d20.9869125!4d105.7911301!16s%2Fg%2F11s8dg99kb?coh=219816&entry=tts&g_ep=EgoyMDI0MDgxNC4xKgBIAVAD"
+          class="map-link"
+          target="_blank"
+          ><strong>Số 19, lộ 2, ngõ 67, Phùng Khoang</strong></a
+        >
+        <a href="#" class="btn-book">Đặt phòng</a>
+      </div>
+
+      <div class="room">
+        <img
+          src="https://musicbox.vn/images/vanquan.jpg"
+          alt="MUSIC BOX VĂN QUÁN"
+        />
+        <h3>MUSIC BOX VĂN QUÁN</h3>
+        <p>0984 492 6006</p>
+        <a
+          href="https://www.google.com/maps/place/Muzic+Box+V%C4%83n+Qu%C3%A1n/@20.978558,105.789557,15z/data=!4m6!3m5!1s0x3135adfab9d04667:0x2a5c1c46a5b3258f!8m2!3d20.9785584!4d105.7895569!16s%2Fg%2F11jzphfj2w?entry=ttu&g_ep=EgoyMDI0MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+          class="map-link"
+          target="_blank"
+          ><strong>44TT11A, khu đô thị Văn Quán</strong></a
+        >
+        <a href="#" class="btn-book">Đặt phòng</a>
+      </div>
+
+      <div class="room">
+        <img
+          src="https://musicbox.vn/images/kinhte.jpg"
+          alt="MUSIC BOX KINH TẾ"
+        />
+        <h3>MUSIC BOX KINH TẾ</h3>
+        <p>0987 374 989</p>
+        <a
+          href="https://www.google.com/maps/place/Muzic+box+kinh+t%E1%BA%BF+qu%E1%BB%91c+d%C3%A2n,+Music+box,+Karaoke+box,+Music+Box+KTQD/@20.99865,105.84759,15z/data=!4m6!3m5!1s0x3135add44c7638ff:0xad77e97d095164a!8m2!3d20.9986502!4d105.8475899!16s%2Fg%2F11vdqj1_t9?coh=219816&entry=tts&g_ep=EgoyMDI0MDgxNC4xKgBIAVAD"
+          class="map-link"
+          target="_blank"
+          ><strong>Nhà 8 Nghách 96 Ngõ Tự Do</strong></a
+        >
+        <a href="#" class="btn-book">Đặt phòng</a>
+      </div>
+
+      <div class="room">
+        <img
+          src="https://musicbox.vn/images/namdong.jpg"
+          alt="MUSIC BOX NAM ĐỒNG"
+        />
+        <h3>MUSIC BOX NAM ĐỒNG</h3>
+        <p>098 594 8008</p>
+        <a
+          href="https://www.google.com/maps/place/Muzic+Box+Nam+%C4%90%E1%BB%93ng,+Music+Box+Nam+%C4%90%E1%BB%93ng/@21.013769,105.833433,15z/data=!4m6!3m5!1s0x3135ab5c13ce2cef:0xbc4470c9a03a5a32!8m2!3d21.0137694!4d105.8334325!16s%2Fg%2F11vkjxgmv1?coh=219816&entry=tts&g_ep=EgoyMDI0MDgxNC4xKgBIAVAD"
+          class="map-link"
+          target="_blank"
+          ><strong>32 NAM ĐỒNG</strong></a
+        >
+        <a href="#" class="btn-book">Đặt phòng</a>
+      </div>
+
+      <div class="room">
+        <img
+          src="https://musicbox.vn/images/nongnghiep.jpg"
+          alt="MUSIC BOX NÔNG NGHIỆP"
+        />
+        <h3>MUSIC BOX NÔNG NGHIỆP</h3>
+        <p>098 697 6716</p>
+        <a
+          href="https://www.google.com/maps/place/MUZIC+BOX+Tr%C3%A2u+Qu%E1%BB%B3,+Music+Box+N%C3%B4ng+Nghi%E1%BB%87p/@21.011024,105.93632,10z/data=!4m6!3m5!1s0x3135a908ac40a535:0x93224771b1cd77e4!8m2!3d21.0110239!4d105.9363201!16s%2Fg%2F11kpfs3g36?coh=219816&entry=tts&g_ep=EgoyMDI0MDgxNC4xKgBIAVAD"
+          class="map-link"
+          target="_blank"
+          ><strong>21 Thành Trung, Trâu Quỳ</strong></a
+        >
+        <a href="#" class="btn-book">Đặt phòng</a>
+      </div>
+
+      <div class="room">
+        <img
+          src="https://musicbox.vn/images/chualang.jpg"
+          alt="MUSIC BOX CHÙA LÁNG"
+        />
+        <h3>MUSIC BOX CHÙA LÁNG</h3>
+        <p>0986 086 326</p>
+        <a
+          href="https://www.google.com/maps/place/Music+Box+Ch%C3%B9a+L%C3%A1ng,+Muzic+Box+Ch%C3%B9a+L%C3%A1ng/@21.025462,105.806969,15z/data=!4m6!3m5!1s0x3135abc564f4e585:0xfcc6a1061a430461!8m2!3d21.0254621!4d105.8069688!16s%2Fg%2F11l5h47wgg?entry=ttu&g_ep=EgoyMDI0MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+          class="map-link"
+          target="_blank"
+          ><strong>14 Ngõ 80 Chùa Láng</strong></a
+        >
+        <a href="#" class="btn-book">Đặt phòng</a>
+      </div>
+
+      <div class="room">
+        <img
+          src="https://musicbox.vn/images/taichinh.jpg"
+          alt="MUSIC BOX TÀI CHÍNH"
+        />
+        <h3>MUSIC BOX TÀI CHÍNH</h3>
+        <p>0983 937 723</p>
+        <a
+          href="https://www.google.com/maps/place/Muzic+Box+T%C3%A0i+Ch%C3%ADnh,+Music+Box+T%C3%A0i+Ch%C3%ADnh/@21.075917,105.772127,15z/data=!4m6!3m5!1s0x3134550064b26c63:0x94994dd337244cb6!8m2!3d21.075917!4d105.772127!16s%2Fg%2F11vk20dh01?coh=219816&entry=tts&g_ep=EgoyMDI0MDgxNC4xKgBIAVAD"
+          class="map-link"
+          target="_blank"
+          ><strong>Số 10 Đ.Sông Nhuệ</strong></a
+        >
+        <a href="#" class="btn-book">Đặt phòng</a>
+      </div>
+
+      <div class="room">
+        <img
+          src="https://musicbox.vn/images/caugiay.jpg"
+          alt="MUSIC BOX CẦU GIẤY"
+        />
+        <h3>MUSIC BOX CẦU GIẤY</h3>
+        <p>0981 375 269</p>
+        <a
+          href="https://www.google.com/maps/place/Muzic+Box+C%E1%BA%A7u+Gi%E1%BA%A5y,+Music+Box+C%E1%BA%A7u+Gi%E1%BA%A5y/@21.042136,105.78629,15z/data=!4m6!3m5!1s0x3135abbc25f7e637:0x34f3b51823351c6d!8m2!3d21.0421358!4d105.7862902!16s%2Fg%2F11vlv12dwy?coh=219816&entry=tts&g_ep=EgoyMDI0MDgxNC4xKgBIAVAD"
+          class="map-link"
+          target="_blank"
+          ><strong>6 Phạm Tuấn Tài</strong></a
+        >
+        <a href="#" class="btn-book">Đặt phòng</a>
+      </div>
+
+      <div class="room">
+        <img
+          src="https://musicbox.vn/images/phungkhoang.jpg"
+          alt="MUSIC BOX AVANGER"
+        />
+        <h3>MUSIC BOX AVENGER</h3>
+        <p>0989 541 469</p>
+        <a
+          href="https://www.google.com/maps/place/Muzic+Box+Ph%C3%B9ng+Khoang,+Music+Box+Ph%C3%B9ng+Khoang/@20.986913,105.79113,15z/data=!4m6!3m5!1s0x3135ad9e2dd1b0a7:0x5dc47bb34387fca0!8m2!3d20.9869125!4d105.7911301!16s%2Fg%2F11s8dg99kb?coh=219816&entry=tts&g_ep=EgoyMDI0MDgxNC4xKgBIAVAD"
+          class="map-link"
+          target="_blank"
+          ><strong>Hà Nội</strong></a
+        >
+        <a href="#" class="btn-book">Đặt phòng</a>
+      </div>
+
+      <div class="room">
+        <img
+          src="https://musicbox.vn/images/Cau-Dat.jpg"
+          alt="THE RECORD ROOM - CẦU ĐẤT"
+        />
+        <h3>THE RECORD ROOM - CẦU ĐẤT</h3>
+        <p>0989 917 215</p>
+        <a
+          href="https://www.google.com/maps/place/The+Record+Room/@20.853272,106.6849809,17z/data=!3m1!4b1!4m6!3m5!1s0x314a7ba2067ca241:0x9308b53151c28d54!8m2!3d20.853272!4d106.6849809!16s%2Fg%2F11whfcynzm?entry=tts&g_ep=EgoyMDI0MDkxNy4wKgBIAVAD"
+          class="map-link"
+          target="_blank"
+          ><strong>145 CẦU ĐẤT, HẢI PHÒNG</strong></a
+        >
+        <a href="#" class="btn-book">Đặt phòng</a>
+      </div>
+
+      <div class="room">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIZO3_4DWohyt85Rl6GD_Px2i2l5pwKMz4-Q&s"
+          alt="AUTO BOX - TUỆ TĨNH"
+        />
+        <h3>AUTO BOX - TUỆ TĨNH</h3>
+        <p>0987 166 101</p>
+        <a
+          href="https://www.google.com/maps/place/AutoBox+-+Tu%E1%BB%87+T%C4%A9nh/@20.9402694,106.317438,17z/data=!3m1!4b1!4m6!3m5!1s0x31359b0051380b93:0x9b15818bc1d8253f!8m2!3d20.9402694!4d106.317438!16s%2Fg%2F11w92b8mzk?q=W8R8+4X4+AutoBox+-+Tu%E1%BB%87+T%C4%A9nh,+%C4%90.+T%E1%BA%A1+Quang+B%E1%BB%ADu,+P.+B%C3%ACnh+H%C3%A0n,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BA%A3i+D%C6%B0%C6%A1ng,+H%E1%BA%A3i+D%C6%B0%C6%A1ng&ftid=0x31359b0051380b93:0x9b15818bc1d8253f&lucs=,94239118,94224825,94227247,94227248,47071704,47069508,94218641,94233073,94203019,47084304,94208458,94208447&g_st=com.google.maps.preview.copy&entry=tts&g_ep=EgoyMDI0MDkxOC4xKgBIAVAD"
+          class="map-link"
+          target="_blank"
+          ><strong>38 Tạ Quang Bửu, Hải Phòng</strong></a
+        >
+        <a href="#" class="btn-book">Đặt phòng</a>
+      </div>
+    </div>
+  </body>
+</html>

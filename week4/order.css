@@ -1,0 +1,154 @@
+:root {
+  --color1: #b8bfd6;
+  --color2: #697a98;
+  --color3: #19335a;
+  --color4: #8fc8eb;
+  --color5: #4675c0;
+  --color6: #ffffff;
+  --color7: #dea1f5;
+}
+
+* {
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vw;
+  background-color: #3f6aaf;
+}
+
+@font-face {
+  font-family: font1;
+  src: url("./fonts/VN-Roygen-Display.ttf");
+}
+
+header p {
+  font-family: font1;
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+#returnhome {
+  width: auto;
+  height: 9vw;
+}
+
+.datphongtructuyen {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vw;
+}
+
+.khungbamuc {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  border: 1px solid var(--color1);
+  margin: 10px;
+  padding: 10px;
+}
+
+.khungbamuc nav {
+  text-align: center;
+  font-size: 3vw;
+}
+
+.bontinhnangchinh {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-color: #b8bfd6;
+  margin: 10px;
+  padding: 10px;
+}
+
+.listan {
+  display: none; /* ẩn */
+  position: absolute; /* chèn lên phần tử khác */
+  border: 2px solid var(--color1);
+  background-color: white;
+  margin: 5px;
+  padding: 5px;
+}
+
+.bonthongtindatphong {
+  font-size: 4vw;
+}
+
+.button {
+  width: 30vw;
+  height: auto;
+  background-color: #b0d8ff;
+  transition: border-color 0.3s ease;
+  font-size: 2vw;
+}
+
+.menu-item {
+  font-size: 2vw;
+  color: rgb(0, 0, 0);
+}
+
+.ttll {
+  background-color: #abc3f0;
+  margin: 10px;
+  padding: 10px;
+}
+
+#thongtinlienlac {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 4fr;
+}
+
+#thongtinlienlac p {
+  margin-top: 10px;
+  font-size: 2vw;
+}
+
+#thongtinlienlac input {
+  margin-top: 10px;
+  width: 40vw;
+}
+
+.thanhtoan {
+  border: 1px solid rgb(157, 157, 239);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  margin: 10px;
+}
+
+#datphong {
+  width: 23vw;
+  height: 7vw;
+  background-color: var(--color6);
+  transition: border-color 0.3s ease;
+}
+
+#datphong:hover {
+  border-color: var(--color7); /* Đổi màu viền sang xanh khi di chuột */
+}
+
+@media (max-width: 770px) {
+  header p {
+    font-size: 4vw;
+  }
+
+  .button {
+    width: 80vw;
+    font-size: 3vw;
+  }
+
+  .bontinhnangchinh {
+    grid-template-columns: 1fr;
+  }
+
+  #thongtinlienlac input {
+    width: 80vw;
+  }
+}
