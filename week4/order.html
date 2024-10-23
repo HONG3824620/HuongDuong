@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./order.css" />
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI Library -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body>
+    <header>
+      <p>ORDER</p>
+      <div>
+        <a href="./home.html"
+          ><img id="returnhome" src="./imagesHome/image0.png" title="ảnh home"
+        /></a>
+      </div>
+    </header>
+
+    <div class="datphongtructuyen">
+      <h1 style="font-size: 3vw">Đặt phòng trực tuyến</h1>
+      <!-- Dùng script -->
+      <button
+        style="background-color: beige"
+        src="https://www.pinterest.com/search/pins/?q=icon%20home&rs=typed"
+      >
+        <b style="font-size: 2vw; transition: color 0.3s ease"
+          >Tra cứu đặt phòng</b
+        >
+      </button>
+    </div>
+    <div class="khungbamuc">
+      <nav>1</nav>
+      <nav>2</nav>
+      <nav>3</nav>
+      <nav>THÔNG TIN ĐẶT PHÒNG</nav>
+      <nav>THÔNG TIN LIÊN LẠC</nav>
+      <nav>HOÀN TẤT</nav>
+    </div>
+    <div class="bontinhnangchinh">
+      <div class="choncoso">
+        <p><b class="bonthongtindatphong">Chọn cơ sở</b></p>
+        <button class="button" onclick="toggleMenu('menuList')">
+          Chọn cơ sở ▼
+        </button>
+        <div id="menuList" class="listan">
+          <div class="menu-item">CS 1</div>
+          <div class="menu-item">CS 2</div>
+          <div class="menu-item">CS 3</div>
+          <div class="menu-item">CS 4</div>
+          <div class="menu-item">CS 5</div>
+        </div>
+      </div>
+      <div>
+        <p><b class="bonthongtindatphong">Chọn phòng</b></p>
+        <button class="button" onclick="toggleMenu('listphong')">
+          Chọn phòng ▼
+        </button>
+        <div id="listphong" class="listan">
+          <div class="menu-item" onclick="chonPhong('S 1-2 người')">
+            S 1-2 người
+          </div>
+          <div class="menu-item" onclick="chonPhong('M 3-4 người')">
+            M 3-4 người
+          </div>
+          <div class="menu-item" onclick="chonPhong('L 6-8 người')">
+            L 6-8 người
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><b class="bonthongtindatphong">Chọn ngày</b></p>
+        <button class="button" id="openDatetimepicker">Chọn ngày ▼</button>
+        <input
+          type="text"
+          id="datetimepicker"
+          style="background-color: rgb(133, 141, 179)"
+        />
+      </div>
+      <div>
+        <p><b class="bonthongtindatphong">Chọn giờ</b></p>
+        <div class="chongio" style="gap: 10px">
+          <button class="button" onclick="toggleMenu('listgio')">
+            Chọn giờ bắt đầu ▼
+          </button>
+          <div id="listgio" class="listan">
+            <div class="menu-item">01:00</div>
+            <div class="menu-item">02:00</div>
+            <div class="menu-item">03:00</div>
+            <div class="menu-item">04:00</div>
+            <div class="menu-item">05:00</div>
+            <div class="menu-item">06:00</div>
+            <div class="menu-item">07:00</div>
+            <div class="menu-item">08:00</div>
+            <div class="menu-item">09:00</div>
+            <div class="menu-item">10:00</div>
+            <div class="menu-item">11:00</div>
+            <div class="menu-item">12:00</div>
+            <div class="menu-item">13:00</div>
+            <div class="menu-item">14:00</div>
+            <div class="menu-item">15:00</div>
+            <div class="menu-item">16:00</div>
+            <div class="menu-item">17:00</div>
+            <div class="menu-item">18:00</div>
+            <div class="menu-item">19:00</div>
+            <div class="menu-item">20:00</div>
+            <div class="menu-item">21:00</div>
+            <div class="menu-item">22:00</div>
+            <div class="menu-item">23:00</div>
+            <div class="menu-item">24:00</div>
+          </div>
+          <button class="button" onclick="toggleMenu('listkhunggio')">
+            Chọn khoảng thời gian ▼
+          </button>
+          <div id="listkhunggio" class="listan">
+            <div class="menu-item">1 o'clock</div>
+            <div class="menu-item">2 o'clock</div>
+            <div class="menu-item">3 o'clock</div>
+            <div class="menu-item">4 o'clock</div>
+            <div class="menu-item">5 o'clock</div>
+            <div class="menu-item">6 o'clock</div>
+            <div class="menu-item">7 o'clock</div>
+            <div class="menu-item">8 o'clock</div>
+            <div class="menu-item">9 o'clock</div>
+            <div class="menu-item">10 o'clock</div>
+            <div class="menu-item">11 o'clock</div>
+            <div class="menu-item">12 o'clock</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ttll">
+      <p><b style="font-size: 3vw">Thông tin liên lạc</b></p>
+      <div id="thongtinlienlac">
+        <p>Tên</p>
+        <input />
+        <p>Số điện thoại</p>
+        <input />
+      </div>
+    </div>
+    <div class="thanhtoan">
+      <div>
+        <p>Số tiền cần thanh toán</p>
+        <p>0 VND</p>
+      </div>
+      <div>
+        <button
+          id="datphong"
+          style="background-color: rgb(221, 220, 245)"
+          onclick="window.location.href ='page3.html'"
+        >
+          Đặt phòng
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function toggleMenu(e) {
+    var menuList = document.getElementById(e);
+    // Kiểm tra thuộc tính display để hiển thị hoặc ẩn danh sách
+    if (menuList.style.display === "none" || menuList.style.display === "") {
+      menuList.style.display = "block"; // Hiện danh sách
+    } else {
+      menuList.style.display = "none"; // Ẩn danh sách
+    }
+  }
+</script>
+
+<script>
+  $(document).ready(function () {
+    // Khởi tạo datetimepicker
+    $("#datetimepicker").datepicker({
+      dateFormat: "yy-mm-dd",
+      minDate: 0, // Chỉ cho phép chọn từ ngày hôm nay trở đi
+    });
+
+    // Khi nhấn nút thì hiển thị datetimepicker
+    $("#openDatetimepicker").click(function () {
+      $("#datetimepicker").datepicker("show");
+    });
+  });
+</script>

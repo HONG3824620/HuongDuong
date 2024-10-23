@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #697a98;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+@font-face {
+  font-family: welcome;
+  src: url("fonts/VN-Roygen-Display.ttf");
+}
+
+h1 {
+  font-family: welcome;
+  font-size: 50px;
+  color: #19335a;
+  font-weight: bold;
+}
+.welcome {
+  margin: 15px;
+  font-family: welcome;
+  font-size: clamp(25px, 4vw, 40px);
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.describe {
+  color: #19335a;
+  margin: 30px;
+  font-size: clamp(15px, 2vw, 20px);
+  text-align: center;
+}
+
+.nut {
+  text-align: right;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.nut a img {
+  height: 50px;
+  width: auto;
+}
+
+.plans-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.card {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 30%;
+  max-width: 300px;
+  min-width: 250px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.card1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb0TeaxHgMC9az1lGGjLOyV3WR3wsTfA1J6lnjAE10IyTZ2llD2QXhQjFMnUYkZX65Cak&usqp=CAU");
+  background-size: cover;
+  filter: brightness(22%) opacity(90%);
+  z-index: -1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKPwH3R_JAt6aDxIYXZJhtNfa55XeVxbFidg&s");
+  background-size: cover;
+  filter: brightness(22%) opacity(90%);
+  z-index: -1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://www.beebopprod.com/wp-content/uploads/2020/10/karaoke-alpes-maritimes.jpg");
+  background-size: cover;
+  filter: brightness(22%) opacity(90%);
+  z-index: -1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.card ul {
+  text-align: left;
+  height: 80%;
+  list-style-type: none;
+}
+
+.card i {
+  margin-right: 8px;
+  color: #4caf50;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card ul li {
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 24px;
+  color: #8fc8eb;
+  margin-bottom: 20px;
+  margin-top: auto;
+}
+
+.join-btn {
+  background-color: #19335a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0px;
+}
+
+.join-btn:hover {
+  background-color: #395681;
+}
+
+.form-container {
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  text-align: center;
+}
+
+.form-container > * {
+  margin-bottom: 15px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  background-color: #19335a;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.form-group input {
+  width: 92%;
+  margin-left: auto;
+}

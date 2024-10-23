@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thành viên</title>
+    <link rel="stylesheet" href="page3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="nut">
+      <a href="./home.html"
+        ><img src="./imagesHome/image0.png" title="ảnh home"
+      /></a>
+    </div>
+
+    <div class="describe">
+      <h1 style="margin-bottom: 20px">Rút một là bái, hát thoải là mái</h1>
+      <i>
+        Bất kể bạn lựa chọn lá bài nào vũ trụ đang gửi thông điệp tới các bạn:
+      </i>
+
+      <div class="welcome">
+        <p>HÃY GIA NHẬP CÙNG CHÚNG TÔI</p>
+      </div>
+    </div>
+
+    <div class="plans-container">
+      <div class="card card2">
+        <h2>No Trước Lo Sau</h2>
+        <ul>
+          <li>
+            <i class="fas fa-check-square"></i>FREE mọi hóa đơn ăn uống dưới 50K
+          </li>
+          <li><i class="fas fa-check-square"></i>Ưu tiên khi pre-order</li>
+          <li><i class="fas fa-check-square"></i>Áp dụng TỐI ĐA 15 BILL</li>
+          <li>
+            <i class="fas fa-times-square" style="color: rgb(157, 65, 65)"></i
+            >Đói
+          </li>
+        </ul>
+        <p class="price">299K/tháng</p>
+        <a href="#registrationForm" class="join-btn">CHỐT</a>
+      </div>
+
+      <div class="card card1">
+        <h2>Bảo Vệ Người Nghèo</h2>
+        <ul>
+          <li>
+            <i class="fas fa-check-square"></i>GIẢM 30% Bill mọi hạng phòng
+          </li>
+          <li><i class="fas fa-check-square"></i>Ưu tiên khi pre-order</li>
+          <li><i class="fas fa-check-square"></i>Áp dụng TỐI ĐA 15 BILL</li>
+          <li>
+            <i class="fas fa-times-square" style="color: rgb(157, 65, 65)"></i
+            >Nghèo
+          </li>
+        </ul>
+        <p class="price">499K/tháng</p>
+        <a href="#registrationForm" class="join-btn">CHỐT</a>
+      </div>
+
+      <div class="card card3">
+        <h2>Chung Thủy</h2>
+        <ul>
+          <li><i class="fas fa-check-square"></i>FREE hóa đơn phòng hạng S</li>
+          <li><i class="fas fa-check-square"></i>Ưu tiên khi pre-order</li>
+          <li>
+            <i class="fas fa-check-square"></i>KHÔNG TỐI ĐA số lần đặt phòng
+          </li>
+          <li>
+            <i class="fas fa-times-square" style="color: rgb(157, 65, 65)"></i
+            >Còn cái họng
+          </li>
+        </ul>
+        <p class="price">999K/month</p>
+        <a href="#registrationForm" class="join-btn">CHỐT</a>
+      </div>
+    </div>
+
+    <div id="registrationForm" class="form-container">
+      <h2>THAM GIA VÀO GT MUZIC BOX</h2>
+      <i style="font-size: small">
+        Muzic box chúng tôi hân hạnh giới thiệu các gói ưu đãi thành viên như
+        trên. Chỉ cần đăng kí ở đây và thành toán vào lần đầu sử dụng gói tại
+        một cơ sở bất kì để tận hưởng các ưu đãi kèm theo.
+      </i>
+
+      <form action="">
+        <div style="margin-top: 20px">
+          <label for="combo-box">Gói Đăng Ký:</label>
+          <select id="combo-box">
+            <option value="option1">Bảo Vệ Người Nghèo</option>
+            <option value="option2">No Trước Lo Sau</option>
+            <option value="option3">Chung Thủy</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Tên</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Nhập tên của bạn"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">SĐT</label>
+          <input
+            type="number"
+            name="phone"
+            placeholder="Nhập số điện thoại của bạn"
+            required
+          />
+        </div>
+
+        <input type="submit" class="btn" value="Gửi" />
+      </form>
+    </div>
+  </body>
+</html>

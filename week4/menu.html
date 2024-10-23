@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu với Nội dung</title>
+    <style>
+      :root {
+        --color-background: #d6dcf0;
+        --color-header: #3f6aaf;
+        --color-footer: #697a98;
+        --color-text: #027494;
+        --color-white: #ffffff;
+        --color-containersmall: #96afd7;
+        --color-buttonPick: #88abdb;
+        --color-buttonPickHover: #b0c6e9;
+        --color-buttonPickActive: #135bd5;
+        --font-size-large: 24px;
+        --font-size-medium: 18px;
+        --font-size-small: 16px;
+        --font-size-h3: 40px;
+        --font-size-h2: 45px;
+        --spacing: 50px;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Times New Roman", Times, serif;
+        background-color: var(--color-background);
+        color: var(--color-text);
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 75px;
+        background-color: var(--color-header);
+        padding: 0 30px;
+        z-index: 1000;
+      }
+
+      .home {
+        flex: 4;
+        margin-left: 40px;
+      }
+
+      .menu {
+        flex: 6;
+        display: flex;
+        gap: 200px;
+        margin-left: 30px;
+      }
+
+      .home-img {
+        width: auto;
+        height: 70px;
+        cursor: pointer; /* Thay đổi con trỏ khi hover */
+      }
+
+      .menu a {
+        color: var(--color-white);
+        text-decoration: none;
+        font-size: var(--font-size-medium);
+      }
+
+      /* Styling iframe to take up remaining space */
+      #content {
+        margin-top: 75px; /* Padding to match the header height */
+        width: 100%;
+        height: calc(100vh - 75px);
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="home">
+        <a href="./home.html" target="content-frame">
+          <img src="./imagesHome/image0.png" alt="home" class="home-img" />
+        </a>
+      </div>
+      <nav class="menu">
+        <a href="./page1.html" target="content-frame">🚩Cơ sở</a>
+        <a href="./order.html" target="content-frame">🎫Đặt phòng</a>
+        <a href="./page3.html" target="content-frame">🫂Thành viên</a>
+      </nav>
+    </header>
+
+    <iframe id="content" name="content-frame" src="./home.html"></iframe>
+  </body>
+</html>

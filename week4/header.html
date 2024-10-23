@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            color: red;
+        }
+        a{
+            text-decoration: none;
+        }
+        header{
+            background-color:antiquewhite;
+            color:red;
+            height: 50px;
+            display: flex;
+            /* position: fixed; */ /* Cố định vị trí */
+            /* align-items: center; */
+        }
+        button{
+            background-color: rgb(217, 85, 85);
+            color: white;
+        }
+        .left{
+            width: 25%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .left img{
+            height: 70%;
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            justify-content:flex-end;
+            gap:2vw;
+            flex:1;
+            margin-right: 10%;
+            gap:10%;
+        }
+        .r1, .r2{
+            display: flex;
+            gap:2vw;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="left">
+            <img src="https://i.pinimg.com/474x/b2/53/91/b25391c50fbc30c04f78b8966dedd277.jpg">
+        </div>
+        <div class="right">
+            <div class="r1">
+                <a href="" class="r" id="h1">Trang chủ</a>
+                <a href="" class="r" id="h2">Danh sách phim</a>
+                <a href="" class="r" id="h3">Đặt vé</a>
+            </div>
+            <div class="r2">
+                <button>Đăng ký</button>
+                <button>Đăng nhập</button>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
